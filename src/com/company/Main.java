@@ -5,22 +5,17 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        List<User> users = Service.getName();
-        System.out.println(Service.getName());
+        List<User> users = Service.getUser();
 
+        List<User> names = Service.findByName(users, "Adid");
+        System.out.println(names);
 
-//        Collections.sort(users, Comparator.comparing(User::getName).thenComparing(User::getAge));
-//        System.out.println("A"+users);
+        List<User> gender = Service.findByGender(users, "Male");
+        System.out.println(gender);
 
+        List<User> age = Service.findByAge(users, 23);
+        System.out.println(age);
 
-//        HashSet<User> users1 = new HashSet<>();
-//        users1.add(new User("Adid",22, "Male"));
-//        users1.add(new User("Wins",22, "Male"));
-//        users1.add(new User("Bob",32, "Male"));
-//        users1.add(new User("Abil",12, "Female"));
-//        users1.add(new User("Abid",19, "Female"));
-//
-//        System.out.println(users1);
 
     }
 }
