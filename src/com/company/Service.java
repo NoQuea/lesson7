@@ -1,21 +1,22 @@
 package com.company;
 
 
+import java.lang.reflect.Array;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Service {
 
     public static List<User> getUser() {
         return List.of(
-
-        new User("Adid", 22, "Male"),
-        new User("Wins", 22, "Male"),
+                new User("Boby", 32, "Male"),
+                new User("Adid", 22, "Male"),
+                new User("Wins", 22, "Male"),
                 new User("Aded", 23, "Male"),
-        new User("Bob", 32, "Male"),
-        new User("Abil", 12, "Female"),
-        new User("Abid", 19, "Female")
+                new User("Abil", 12, "Female"),
+                new User("Abid", 19, "Female")
 
        );
     }
@@ -34,5 +35,7 @@ public class Service {
         public static void printUsers( List<User> users ) {
             users.forEach(System.out::println);
         }
+
+
 
     }
